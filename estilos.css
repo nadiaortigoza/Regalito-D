@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #e6f0fa 0%, #d4e4f7 50%, #bdd7f5 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    padding: 40px 20px;
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+.sobre-contenedor {
+    width: 100%;
+    max-width: 520px;
+}
+
+.sobre {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 
+        0 10px 40px rgba(70, 130, 180, 0.2),
+        0 0 0 2px rgba(135, 206, 235, 0.5);
+    overflow: hidden;
+}
+
+.solapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background: linear-gradient(180deg, #bdd7f5 0%, #d4e4f7 100%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    z-index: 2;
+}
+
+.carta {
+    padding: 40px 30px 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.titulo {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 2.3rem;
+    color: #4682b4;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(70, 130, 180, 0.2);
+}
+
+.mensaje {
+    color: #2c3e50;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.mensaje p {
+    margin-bottom: 18px;
+}
+
+.despedida {
+    margin-top: 25px;
+    font-style: italic;
+    color: #5a9bd5;
+}
+
+.mensaje-final {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e6f0fa 0%, #d4e4f7 100%);
+    border-radius: 15px;
+    border: 2px dashed #87ceeb;
+    margin-top: 20px;
+}
+
+.texto-flor {
+    font-size: 1.1rem;
+    color: #4682b4;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.texto-especial {
+    font-size: 1rem;
+    color: #5a9bd5;
+    margin: 8px 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+@keyframes subirFlor {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.flores-animadas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@media (max-width: 600px) {
+    .carta {
+        padding: 30px 20px 20px;
+    }
+    
+    .titulo {
+        font-size: 1.8rem;
+    }
+    
+    .mensaje {
+        font-size: 0.95rem;
+    }
+
+    .texto-flor, .texto-especial {
+        font-size: 0.9rem;
+    }
+}

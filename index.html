@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag.Principal💙</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flores-animadas"></div>
+    
+    <div class="contenedor-principal">
+        <div class="sobre-contenedor">
+            <div class="sobre">
+                <div class="solapa"></div>
+                <div class="carta">
+                    <h1 class="titulo"> Rody 💙</h1>
+                    
+                    <div class="mensaje">
+                        <p>Holis, Rody✨</p>
+                        
+                        <p>Desde que te conocí, cada conversación,cada momento compartido, me ha hecho sentir algo muy bonito: <strong>paz</strong>. 💙</p>
+                        
+                        <p>Contigo todo se siente tranquilo, ligero, bien. Me das esa calma que no sabía que necesitaba, y hablar contigo se ha vuelto uno de mis momentos favoritos. Me fascina descubrir quién eres, y cada día me gustas más.</p>
+                        
+                        <p>No sé qué nos depare el tiempo, pero valoro mucho este presente contigo. Gracias por hacerme sentir bien, por ser tú :D</p>
+                        
+                        <p>Esta canción me hace pensar en ti y en todo lo bien que me haces sentir 🎶</p>
+                        
+                        <p class="despedida">Con mucho cariño, Jaz<br>Alguien que disfruta cada charla contigo 💙</p>
+                    </div>
+                    
+                    <div class="reproductor-contenedor" style="text-align:center; padding:30px 20px;">
+                        <p style="font-size:1.1rem; color:#4682b4; margin-bottom:15px;">🎶 Nothing Else Matters — Metallica 🎸</p>
+                        <a href="https://youtu.be/cMml9DFIyuU" target="_blank"
+                           style="display:inline-block; padding:12px 30px; background:linear-gradient(135deg, #4682b4, #5a9bd5); color:white; border-radius:30px; text-decoration:none; font-weight:600; font-size:1rem; box-shadow:0 4px 15px rgba(70,130,180,0.3);">
+                            ▶ Escuchar la canción 💙
+                        </a>
+                        <p style="margin-top:15px; font-size:0.9rem; color:#5a9bd5;">Te dedico una de mis canciones favoritas</p>
+                    </div>
+
+                    <div class="mensaje-final">
+                        <p class="texto-flor">Disculpame jaja💙</p>
+                        <p class="texto-especial">No suelo hacer estás cosas de crear páginas web para alguien, de hecho es mi primera vez para alguien que si me interesa y mucho</p>
+                        <p class="texto-especial"> queria hacer lindo, espero que te guste lgmt jaja, lo di todo, no me juzgues, el diseño me cuesta aún jajaja, loviiu Rody💙</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const contenedorFlores = document.querySelector('.flores-animadas');
+        const tiposFlor = ['💙', '🌸', '🌼', '🌿', '💎', '✨', '🌷', '🦋'];
+        
+        setInterval(() => {
+            const flor = document.createElement('span');
+            flor.innerHTML = tiposFlor[Math.floor(Math.random() * tiposFlor.length)];
+            flor.style.position = 'fixed';
+            flor.style.left = (Math.random() * 100) + 'vw';
+            flor.style.bottom = '-50px';
+            flor.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            flor.style.opacity = (Math.random() * 0.5 + 0.5);
+            flor.style.pointerEvents = 'none';
+            flor.style.animation = 'subirFlor 8s linear forwards';
+            contenedorFlores.appendChild(flor);
+            
+            setTimeout(() => flor.remove(), 8000);
+        }, 6000);
+    </script>
+</body>
+</html>
